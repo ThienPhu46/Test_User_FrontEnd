@@ -1,10 +1,10 @@
 import React from 'react';
-import LoginClient from './Pages/LoginClient';
+import Login from './Pages/Login';
 
 function App() {
   return (
     <div>
-      <LoginClient />
+      <Login />
     </div>
   );
 }

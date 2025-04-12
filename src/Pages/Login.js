@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import '../Design_Css/LoginClient.css';
+import '../Design_Css/Login.css';
 
-const LoginClient = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faLock, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -15,14 +18,15 @@ const LoginClient = () => {
   return (
     <div className="login-container">
       <div className="logo">
-        <img src="logo.png" alt="Debug Team Logo" />
         <span>Debug Team</span>
       </div>
       <div className="login-box">
         <h2>Đăng Nhập</h2>
         <form onSubmit={handleSubmit}>
           <div className="input-group">
-            <span className="icon">👤</span>
+            <span className="icon">
+              <FontAwesomeIcon icon={faUser} />
+            </span>
             <input
               type="text"
               placeholder="Tên đăng nhập"
@@ -32,7 +36,9 @@ const LoginClient = () => {
             />
           </div>
           <div className="input-group">
-            <span className="icon">🔒</span>
+            <span className="icon">
+              <FontAwesomeIcon icon={faLock} />
+            </span>
             <input
               type={showPassword ? 'text' : 'password'}
               placeholder="Mật khẩu"
@@ -44,7 +50,7 @@ const LoginClient = () => {
               className="eye-icon"
               onClick={() => setShowPassword(!showPassword)}
             >
-              👁️
+              <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
             </span>
           </div>
           <button type="submit">Đăng Nhập</button>
@@ -54,4 +60,4 @@ const LoginClient = () => {
   );
 };
 
-export default LoginClient;
+export default Login;
