@@ -1,6 +1,8 @@
 // src/components/Dashboard.js
 import React, { useState } from 'react';
 import '../Design_Css/Dashboard.css';
+import Sidebar from '../Components/Sliderbar';
+
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -11,60 +13,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      {/* Sidebar */}
-      <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
-        <div className="sidebar-header">
-          <div className="logout-button">
-            Đăng xuất
-          </div>
-          <div className="close-icon" onClick={toggleSidebar}>≪</div>
-          <div className="avatar-placeholder"></div>
-          <p>Administrator</p>
-        </div>
-        <ul className="sidebar-menu">
-          <li>
-            <span className="menu-icon">🏠</span> Trang Chủ
-          </li>
-          <li>
-            <span className="menu-icon">🛏️</span> Phòng
-          </li>
-          <li>
-            <span className="menu-icon">📅</span> Đặt Phòng
-          </li>
-          <li>
-            <span className="menu-icon">📄</span> Hóa Đơn
-          </li>
-          <li>
-            <span className="menu-icon">👥</span>QL Khách Hàng
-          </li>
-          <li>
-            <span className="menu-icon">🏢</span> QL Phòng
-          </li>
-          <li>
-            <span className="menu-icon">🏢</span> QL Loại Phòng
-          </li>
-          <li>
-            <span className="menu-icon">🏢</span> QL Dịch vụ
-          </li>
-          <li>
-            <span className="menu-icon">🔢</span> QLCT Tính Điểm
-          </li>
-          <li>
-            <span className="menu-icon">🔢</span> QLLS Tích Điểm
-          </li>
-          <li>
-            <span className="menu-icon">📋</span> QL Tài Khoản
-          </li>
-
-          <li>
-            <span className="menu-icon">👤</span> QL Nhân Viên
-          </li>
-          <li>
-            <span className="menu-icon">📊</span> Thống Kê
-          </li>
-        </ul>
-      </div>
-
+    <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       {/* Top Header (Trang Chủ) */}
       <div className="top-header">
         <div className="top-title-container">

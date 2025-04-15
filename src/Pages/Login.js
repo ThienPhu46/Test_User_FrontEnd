@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
     console.log('Username:', username);
     console.log('Password:', password);
-    navigate('/Dashboard'); // Chuyển hướng đến trang Dashboard
+    navigate('/Dashboard'); 
   };
 
   return (
