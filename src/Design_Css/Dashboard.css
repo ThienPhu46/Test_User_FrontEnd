@@ -187,3 +187,82 @@
   font-size: 35px;
   font-weight: 500;
 }
+/* Thông Báo Đăng Xuất */
+.logout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.649); /* Lớp phủ mờ */
+  z-index: 1001; /* Cao hơn sidebar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logout-modal-content {
+  background: linear-gradient(to bottom, #1D3C73, #2393AA, #3ED1B7); 
+
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+  height: 220px;
+}
+
+.logout-modal-header {
+  display: flex;
+  justify-content: space-between; /* Đảm bảo tiêu đề và nút X nằm hai bên */
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fff; /* Nền trắng cho tiêu đề */
+  padding: 10px 10px;
+  border-radius: 10px 10px 0 0; /* Bo góc trên */
+}
+
+.header-text {
+  font-size: 18px;
+  color: #000; /* Chữ đen */
+}
+
+.close-icon  {
+  font-size: 16px;
+  color: #000; /* Nút X màu đen */
+  cursor: pointer;
+  font-weight: bold; /* Làm chữ X đậm hơn */
+  line-height: 1; /* Đảm bảo chữ X không bị lệch */
+  padding: 0 5px; /* Khoảng cách nhỏ để dễ nhấp */
+}
+
+.logout-message {
+  font-size: 22px;
+  margin: 40px 0;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.logout-modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #1D3E92; /* Màu xanh dương đậm giống hình */
+  color: white; /* Chữ trắng */
+  text-transform: uppercase; /* Chữ in hoa giống "YES" và "NO" */
+  width:130px;
+  font-size: 14px;
+}
+
+.confirm-button:hover,
+.cancel-button:hover {
+  background-color: #357abd; /* Màu xanh đậm hơn khi hover */
+}

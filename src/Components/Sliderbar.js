@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sliderbar.css'; 
 
-const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
+const Sidebar = ({ isSidebarOpen, toggleSidebar, onLogoutClick }) => {
   return (
     <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
@@ -23,7 +23,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           <span className="menu-icon">📄</span> Hóa Đơn
         </li>
         <li>
-          <span className="menu-icon">👥</span>QL Khách Hàng
+          <span className="menu-icon">👥</span> QL Khách Hàng
         </li>
         <li>
           <span className="menu-icon">🏢</span> QL Phòng
@@ -49,8 +49,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
         <li>
           <span className="menu-icon">📊</span> Thống Kê
         </li>
-        <li>
-          <span className="menu-icon">📊</span> Đăng Xuất 
+        <li onClick={onLogoutClick}>
+          <span className="menu-icon">📊</span> Đăng Xuất
         </li>
       </ul>
     </div>
