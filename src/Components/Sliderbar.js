@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sliderbar.css'; 
-
+import { Link } from "react-router-dom";
 const Sidebar = ({ isSidebarOpen, toggleSidebar, onLogoutClick }) => {
   return (
     <div className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
@@ -10,46 +10,73 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, onLogoutClick }) => {
         <p>Administrator</p>
       </div>
       <ul className="sidebar-menu">
-        <li>
-          <span className="menu-icon">🏠</span> Trang Chủ
-        </li>
-        <li>
-          <span className="menu-icon">🛏️</span> Phòng
-        </li>
-        <li>
-          <span className="menu-icon">📅</span> Đặt Phòng
-        </li>
-        <li>
-          <span className="menu-icon">📄</span> Hóa Đơn
-        </li>
-        <li>
-          <span className="menu-icon">👥</span> QL Khách Hàng
-        </li>
-        <li>
-          <span className="menu-icon">🏢</span> QL Phòng
-        </li>
-        <li>
-          <span className="menu-icon">🏢</span> QL Loại Phòng
-        </li>
-        <li>
-          <span className="menu-icon">🏢</span> QL Dịch vụ
-        </li>
-        <li>
-          <span className="menu-icon">🔢</span> QLCT Tính Điểm
-        </li>
-        <li>
-          <span className="menu-icon">🔢</span> QLLS Tích Điểm
-        </li>
-        <li>
-          <span className="menu-icon">📋</span> QL Tài Khoản
-        </li>
-        <li>
-          <span className="menu-icon">👤</span> QL Nhân Viên
-        </li>
-        <li>
-          <span className="menu-icon">📊</span> Thống Kê
-        </li>
-        <li onClick={onLogoutClick}>
+      <li>
+    <Link to="/Dashboard">
+      <span className="menu-icon">🏠</span> Trang Chủ
+    </Link>
+  </li>
+  <li>
+    <Link to="/RoomAdmin">
+      <span className="menu-icon">🛏️</span> Phòng
+    </Link>
+  </li>
+  <li>
+    <Link to="/dat-phong">
+      <span className="menu-icon">📅</span> Đặt Phòng
+    </Link>
+  </li>
+  <li>
+    <Link to="/hoa-don">
+      <span className="menu-icon">📄</span> Hóa Đơn
+    </Link>
+  </li>
+  <li>
+    <Link to="/khach-hang">
+      <span className="menu-icon">👥</span> QL Khách Hàng
+    </Link>
+  </li>
+  <li>
+    <Link to="/ql-phong">
+      <span className="menu-icon">🏢</span> QL Phòng
+    </Link>
+  </li>
+  <li>
+    <Link to="/ql-loai-phong">
+      <span className="menu-icon">🏢</span> QL Loại Phòng
+    </Link>
+  </li>
+  <li>
+    <Link to="/ql-dich-vu">
+      <span className="menu-icon">🏢</span> QL Dịch vụ
+    </Link>
+  </li>
+  <li>
+    <Link to="/qlct-tinh-diem">
+      <span className="menu-icon">🔢</span> QLCT Tính Điểm
+    </Link>
+  </li>
+  <li>
+    <Link to="/qlls-tich-diem">
+      <span className="menu-icon">🔢</span> QLLS Tích Điểm
+    </Link>
+  </li>
+  <li>
+    <Link to="/tai-khoan">
+      <span className="menu-icon">📋</span> QL Tài Khoản
+    </Link>
+  </li>
+  <li>
+    <Link to="/nhan-vien">
+      <span className="menu-icon">👤</span> QL Nhân Viên
+    </Link>
+  </li>
+  <li>
+    <Link to="/thong-ke">
+      <span className="menu-icon">📊</span> Thống Kê
+    </Link>
+  </li>
+
+  <li onClick={onLogoutClick}>
           <span className="menu-icon">📊</span> Đăng Xuất
         </li>
       </ul>

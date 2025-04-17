@@ -90,24 +90,24 @@ const Dashboard = () => {
       </div>
       
       {showLogoutConfirm && (
-  <div className="logout-modal">
-    <div className="logout-modal-content">
-      <div className="logout-modal-header">
-        <span className="header-text">Thông Báo</span>
-        <span className="close-icon" onClick={handleCancelLogout}>X</span>
-      </div>
-      <p className="logout-message">Bạn có muốn đăng xuất?</p>
-      <div className="logout-modal-buttons">
-        <button className="confirm-button" onClick={handleConfirmLogout}>
-          YES
-        </button>
-        <button className="cancel-button" onClick={handleCancelLogout}>
-          NO
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+        <div className="logout-modal">
+          <div className="logout-modal-content">
+            <span className="close-icon" onClick={handleCancelLogout}>X</span>
+            <div className="logout-modal-header">
+              <span className="header-text">Thông Báo</span>
+            </div>
+            <p className="logout-message">Bạn có muốn đăng xuất?</p>
+            <div className="logout-modal-buttons">
+              <button className="confirm-button" onClick={handleConfirmLogout}>
+                YES
+              </button>
+              <button className="cancel-button" onClick={handleCancelLogout}>
+                NO
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
