@@ -21,7 +21,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, onLogoutClick }) => {
     </Link>
   </li>
   <li>
-    <Link to="/dat-phong">
+    <Link to="/BookingRoom">
       <span className="menu-icon">📅</span> Đặt Phòng
     </Link>
   </li>
