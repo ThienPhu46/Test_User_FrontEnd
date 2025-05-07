@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../Design_Css/Dashboard.css';
-import Sidebar from '../Components/Sliderbar';
+import '../../Design_Css/Admin//Dashboard.css';
+import Sidebar from '../../Components/Admin/Sliderbar';
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

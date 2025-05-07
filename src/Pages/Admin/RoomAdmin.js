@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Sidebar from '../Components/Sliderbar';
-import RoomCard from '../Components/RoomCard';
-import '../Design_Css/RoomAdmin.css';
+import Sidebar from '../../Components/Admin/Sliderbar';
+import RoomCard from '../../Components/Admin/RoomCard';
+import '../../Design_Css/Admin/RoomAdmin.css';
 
 const Room = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

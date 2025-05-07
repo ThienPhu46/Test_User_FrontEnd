@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../Design_Css/BookingRoom.css';
-import Sidebar from '../Components/Sliderbar';
+import '../../Design_Css/Admin/BookingRoom.css';
+import Sidebar from '../../Components/Admin/Sliderbar';
 
 const BookingList = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Pages/Login';
-import Dashboard from './Pages/Dashboard';
-import RoomAdmin from './Pages/RoomAdmin';
-import BookingRoom from './Pages/BookingRoom';
+import Login from './Pages/Admin/Login';
+import Dashboard from './Pages/Admin/Dashboard';
+import RoomAdmin from './Pages/Admin/RoomAdmin';
+import BookingRoom from './Pages/Admin/BookingRoom';
 
 const App = () => {
   return (
