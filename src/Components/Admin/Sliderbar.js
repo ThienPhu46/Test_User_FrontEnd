@@ -26,7 +26,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, onLogoutClick }) => {
     </Link>
   </li>
   <li>
-    <Link to="/hoa-don">
+    <Link to="/BillAdmin">
       <span className="menu-icon">📄</span> Hóa Đơn
     </Link>
   </li>
