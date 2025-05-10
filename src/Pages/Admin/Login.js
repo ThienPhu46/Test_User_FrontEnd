@@ -55,7 +55,9 @@ const Login = () => {
               <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
             </span>
           </div>
+          <div className="button login">
           <button type="submit">Đăng Nhập</button>
+          </div>
         </form>
       </div>
     </div>
