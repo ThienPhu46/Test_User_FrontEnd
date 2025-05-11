@@ -531,7 +531,7 @@ html {
     align-items: center;
   }
   
-  .details-modal-content {
+  .details-modal-contentt {
     background: #fff;
     border-radius: 10px;
     width: 90%;
@@ -567,7 +567,7 @@ html {
     color: #000;
   }
   
-  .details-table {
+  .bk-details-table {
     width: 100%;
     border-collapse: collapse;
     background-color: #fff;
@@ -575,7 +575,7 @@ html {
     border-radius: 0.3rem;
   }
   
-  .details-table th {
+  .bk-details-table th {
     background-color: #1D3E92;
     color: white;
     padding: 0.5rem;
@@ -583,7 +583,7 @@ html {
     font-size: 0.9rem;
   }
   
-  .details-table td {
+  .bk-details-table td {
     padding: 0.5rem;
     text-align: center;
     border-top: 1px solid #ccc;
@@ -597,7 +597,7 @@ html {
     margin-top: 1rem;
   }
   
-  .close-details-button {
+  .close-details-buttonn {
     padding: 0.5rem 2rem;
     border: none;
     border-radius: 0.5rem;

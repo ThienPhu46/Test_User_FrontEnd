@@ -504,7 +504,7 @@ const InvoiceList = () => {
               <span className="total-value">{selectedInvoice.grandTotal}</span>
             </div>
             <div className="invoice-footer">
-              <div className="footer-text">Cảm ơn quý khách! ❤️</div>
+              <div className="footer-text">Cảm ơn quý khách!💙</div>
               <div className="footer-contact">debugteam@gmail.com - +84 123 456 789</div>
             </div>
           </div>

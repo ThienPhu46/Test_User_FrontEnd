@@ -59,10 +59,8 @@ html {
 
 .search-barr-container {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     margin-bottom: 1rem;
-    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -213,7 +211,7 @@ html {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
-    border-bottom: 2px dashed #000;
+ 
     padding-bottom: 0.5rem;
     justify-content: center;
 }
@@ -322,12 +320,13 @@ html {
     color: #000;
     margin-right: 0.5rem;
     align-content: center;
+    
 }
 
 .total-value {
     font-size: 2rem;
     font-weight: bold;
-    color: #ff0000;
+    color: #1D3E92;
     
 }
 

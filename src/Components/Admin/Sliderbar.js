@@ -31,7 +31,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, onLogoutClick }) => {
     </Link>
   </li>
   <li>
-    <Link to="/khach-hang">
+    <Link to="/CustomerManager">
       <span className="menu-icon">👥</span> QL Khách Hàng
     </Link>
   </li>

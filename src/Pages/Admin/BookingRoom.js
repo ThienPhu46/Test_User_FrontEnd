@@ -361,7 +361,7 @@ const BookingList = () => {
 
       {showDetailsModal && selectedBooking && (
         <div className="details-modal">
-          <div className="details-modal-content">
+          <div className="details-modal-contentt">
             <h2 className="details-modal-title">Chi Tiết Phiếu Thuê {selectedBooking.id}</h2>
             <div className="details-modal-header">
               <div className="header-item">
@@ -374,7 +374,7 @@ const BookingList = () => {
                 <span role="img" aria-label="employee">👥</span> {selectedBooking.employeeName}
               </div>
             </div>
-            <table className="details-table">
+            <table className="bk-details-table">
               <thead>
                 <tr>
                   <th>Số phòng</th>
@@ -393,7 +393,7 @@ const BookingList = () => {
               </tbody>
             </table>
             <div className="details-modal-buttons">
-              <button className="close-details-button" onClick={handleCloseDetails}>
+              <button className="close-details-buttonn" onClick={handleCloseDetails}>
                 Thoát
               </button>
             </div>
