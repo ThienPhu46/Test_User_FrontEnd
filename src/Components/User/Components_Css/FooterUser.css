@@ -1,0 +1,19 @@
+.map-copyright {
+  background-color: #1e3a8a;
+  font-size: 0.6rem;
+  padding: 1px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+justify-content: center;
+display: flex;
+align-items: center;
+}
+.map-copyright p
+{
+  color: white;
+}

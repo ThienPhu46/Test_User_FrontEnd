@@ -1,0 +1,66 @@
+.user-profile-container {
+  width: 425px;
+  height: 472px;
+  border-radius: 20px 20px 0px 0px;
+  background: var(--Primary---Mu-chnh-Gradient-Start, #2D74BB);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.user-profile-header h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.user-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #e0e0e0;
+}
+
+.user-points {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.user-points .icon {
+  font-size: 20px;
+}
+
+.user-menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.menu-item .icon {
+  font-size: 20px;
+}

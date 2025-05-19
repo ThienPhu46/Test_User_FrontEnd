@@ -1,0 +1,261 @@
+.main-container-loggedin .nav-container {
+  background-color: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-container-loggedin .nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container-loggedin .logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.main-container-loggedin .logo-container:hover
+{
+  cursor: pointer;
+}
+
+.main-container-loggedin .logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.main-container-loggedin .w-full,
+.main-container-loggedin .h-full {
+  width: 100%;
+  height: 100%;
+}
+
+.main-container-loggedin .logo-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1e5b94;
+}
+
+.main-container-loggedin .desktop-nav {
+  display: none;
+  margin-left: 200px;
+}
+
+@media (min-width: 768px) {
+ .main-container-loggedin .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.main-container-loggedin .nav-link {
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 20px;
+  
+}
+
+.main-container-loggedin .nav-link.active {
+  font-weight: 600;
+  color: black;
+}
+
+.main-container-loggedin .nav-link:hover {
+  color: #1e5b94;
+}
+
+.main-container-loggedin .auth-buttons {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-container-loggedin .login-button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.main-container-loggedin .login-button:hover {
+  background-color: #d1d5db;
+}
+
+.main-container-loggedin .register-button {
+  background-color: #1e5b94;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.main-container-loggedin .register-button:hover {
+  background-color: #164a7e;
+}
+
+.main-container-loggedin .mobile-menu-button {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1f2937;
+}
+
+@media (min-width: 768px) {
+  .main-container-loggedin .mobile-menu-button {
+    display: none;
+  }
+}
+
+.main-container-loggedin .mobile-nav {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.main-container-loggedin .mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.main-container-loggedin .mobile-nav-link {
+  color: #1f2937;
+  padding: 0.5rem 0;
+  text-decoration: none;
+
+}
+
+.main-container-loggedin .mobile-nav-link:hover {
+  color: #1e5b94;
+}
+
+.main-container-loggedin .mobile-auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.main-container-loggedin .mobile-login-button {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main-container-loggedin .mobile-login-button:hover {
+  background-color: #d1d5db;
+}
+
+.main-container-loggedin .mobile-register-button {
+  background-color: #1e5b94;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.main-container-loggedin .mobile-register-button:hover {
+  background-color: #164a7e;
+}
+
+/* Hero section styles */
+.main-container-loggedin .hero-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 500px;
+}
+
+.main-container-loggedin .hero-image-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container-loggedin .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-container-loggedin .hero-cta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container-loggedin .register-now-button {
+  background: linear-gradient(to right, #1D3C73, #2393AA, #3ED1B7);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.375rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  border-radius: 20px;
+}
+
+.main-container-loggedin .register-now-button:hover {
+  background-color: #164a7e;
+  transform: scale(1.05);
+}
+
+/* Main container */
+.main-container-loggedin .main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-container-loggedin .logo-container img{
+  width: 70px;
+  height: 70px;
+}
+.main-container-loggedin .user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.main-container-loggedin .user-name,
+.main-container-loggedin .user-points {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.main-container-loggedin .user-icon,
+.main-container-loggedin .coin-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.main-container-loggedin .points-text {
+  color: #2563eb;
+  font-weight: bold;
+}

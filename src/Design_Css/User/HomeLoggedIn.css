@@ -1,0 +1,136 @@
+.HomeLoggedIn_all .page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.HomeLoggedIn_all .hotel-services-container,
+.HomeLoggedIn_all .membership-content {
+  background-color: #e6f7fa;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HomeLoggedIn_all .hotel-map-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.HomeLoggedIn_all .hotel-services-title,
+.HomeLoggedIn_all .hotel-map-title {
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  width: calc(3 * 350px + 2 * 20px);
+  max-width: 100%;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-right: 100px;
+}
+
+.HomeLoggedIn_all .membership-description p {
+  font-size: 25px;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;
+  font-weight: 550;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 15px;
+}
+
+.HomeLoggedIn_all .services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 70px;
+  justify-content: center;
+}
+
+.HomeLoggedIn_all .service-card {
+  width: 350px;
+  height: 450px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.HomeLoggedIn_all .service-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.HomeLoggedIn_all .service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.HomeLoggedIn_all .membership-content {
+  align-items: flex-start;
+  max-width: calc(3 * 350px + 2 * 70px);
+  margin: 0 auto;
+}
+
+.HomeLoggedIn_all .map-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.HomeLoggedIn_all .map-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .HomeLoggedIn_all .services-grid {
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  .HomeLoggedIn_all .hotel-services-title,
+  .HomeLoggedIn_all .hotel-map-title {
+    width: calc(2 * 350px + 1 * 20px);
+  }
+
+  .HomeLoggedIn_all .membership-content {
+    max-width: calc(2 * 350px + 1 * 70px);
+  }
+}
+
+@media (max-width: 768px) {
+  .HomeLoggedIn_all .services-grid {
+    grid-template-columns: 350px;
+  }
+
+  .HomeLoggedIn_all .hotel-services-title,
+  .HomeLoggedIn_all .hotel-map-title {
+    width: 350px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .HomeLoggedIn_all .hotel-services-container,
+  .HomeLoggedIn_all .hotel-map-container,
+  .HomeLoggedIn_all .membership-content {
+    padding: 20px 10px;
+  }
+
+  .HomeLoggedIn_all .membership-content {
+    max-width: 350px;
+  }
+
+  .HomeLoggedIn_all .membership-description {
+    font-size: 15px;
+  }
+}

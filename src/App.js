@@ -1,22 +1,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './Pages/Admin/Login';
-import Dashboard from './Pages/Admin/Dashboard';
-import RoomAdmin from './Pages/Admin/RoomAdmin';
-import BookingRoom from './Pages/Admin/BookingRoom';
-import BillAdmin from './Pages/Admin/BillAdmin';
-import CustomerManager from './Pages/Admin/CustomerManager';
+import HomePage from './Pages/User/HomePage';
+import Introduce from './Pages/User/Introduce';
+import Room from './Pages/User/Room';
+import Feature from './Pages/User/Feature';
+import Discount from './Pages/User/Discount';
+import Booking_Room from './Pages/User/Booking_Room';
+import Contact from './Pages/User/Contact';
+import LoginUser from './Components/User/Components_Js/LoginUser';
+import RegisterUser from './Components/User/Components_Js/RegisterUser';
+import HomeLoggedIn from './Pages/User/HomeLoggedIn';
+import IntroduceLoggedIn from './Pages/User/IntroduceLoggedIn';
+import RoomLoggedIn from './Pages/User/RoomLoggedIn';
+import FeatureLoggedIn from './Pages/User/FeatureLoggedIn';
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/RoomAdmin" element={<RoomAdmin />} />
-        <Route path="/BookingRoom" element={<BookingRoom />} />
-        <Route path="/BillAdmin" element={<BillAdmin />} />
-        <Route path="/CustomerManager" element={<CustomerManager />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Introduce" element={<Introduce />} />
+        <Route path="/Room" element={<Room />} />
+        <Route path="/Feature" element={<Feature />} />
+        <Route path="/Discount" element={<Discount />} />
+        <Route path="/Booking_Room" element={<Booking_Room />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/LoginUser" element={<LoginUser />} />
+        <Route path="/RegisterUser" element={<RegisterUser />} />
+        <Route path="/HomeLoggedIn" element={<HomeLoggedIn />} />
+        <Route path="/IntroduceLoggedIn" element={<IntroduceLoggedIn />} />
+        <Route path="/RoomLoggedIn" element={<RoomLoggedIn />} />
+        <Route path="/FeatureLoggedIn" element={<FeatureLoggedIn />} />
+
       </Routes>
     </Router>
   );

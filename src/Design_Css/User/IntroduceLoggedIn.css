@@ -1,0 +1,108 @@
+.hotel-container {
+  width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;  
+  max-width: 100%;
+  text-align: left;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+body {
+  background-color: #e6f7fa;
+  margin: 0;
+}
+
+.hotel-title {
+display: flex;
+width: 458px;
+height: 41px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+text-align: center;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+text-transform: uppercase;
+}
+
+.underline1
+{
+    height: 1px;
+    background-color: black;
+    width: 50%;
+    margin-bottom: 30px;
+}
+.underline2
+{
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.section-title {
+width: 1194px;
+height: 38px;
+flex-shrink: 0;
+color: #000;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 121.095%;
+}
+
+.quote {
+  font-style: italic;
+  color: #666;
+  padding-left: 20px;
+  border-left: 4px solid #666;
+  margin-left: 30px;
+}
+
+.list {
+  list-style-position: inside;
+  padding-left: 10px;
+}
+
+.list li {
+  margin-bottom: 5px;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125.912%;
+  font-family: Inter;
+}
+
+.footer {
+
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: 30px;
+}
+p
+{
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.095%;
+    color: #000;
+}
+.footer p
+{
+    width: 1196px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 121.095%;
+    height: 116px;
+}
