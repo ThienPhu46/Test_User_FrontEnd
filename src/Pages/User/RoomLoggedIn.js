@@ -9,7 +9,7 @@ return (
 <>
       <HeaderUserLogin />
     
-    <div className="single-room-container">
+    <div className="single-room-container-roomloggedin">
               <section className="section">
         <h1 className="section-title">PHÒNG NGỦ</h1>
         <p>

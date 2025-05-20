@@ -4,7 +4,7 @@ import HeaderBookingRoom from "../../Components/User/Components_Js/HeaderBooking
 import FooterUser from "../../Components/User/Components_Js/FooterUser";
 import Notification_BookingRoom from "../../Components/User/Components_Js/Notification_BookingRoom";
 
-export default function BookingRoom() {
+export default function Booking_Room_LoggedIn() {
   const [currentStep, setCurrentStep] = useState(1);
   const [selectedRooms, setSelectedRooms] = useState([]);
   const [selectedServices, setSelectedServices] = useState([]);

@@ -1,11 +1,11 @@
-.section-feature
+.section-feature-loggedin .section-feature
 {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
   padding-top:20px;
 }
-.section-feature h1
+.section-feature-loggedin .section-feature h1
 {
 color: #000;
 font-family: Inter;
@@ -15,12 +15,12 @@ font-weight: 700;
 line-height: normal;
 text-transform: uppercase;
 }
-.section-feature .underline-room
+.section-feature-loggedin .section-feature .underline-room
 {
     padding-bottom: 20px;
 }
 
-.amenities-container {
+.section-feature-loggedin .amenities-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -29,7 +29,7 @@ text-transform: uppercase;
   padding: 20px;
   background-color: #e6f7fb;
 }
-.amenities-container img:hover
+.section-feature-loggedin .amenities-container img:hover
 {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -37,7 +37,7 @@ text-transform: uppercase;
     transform: scale(1.01);
 }
 
-.amenity-card {
+.section-feature-loggedin .amenity-card {
   display: flex;
   flex-direction: column;
   width: 350px;
@@ -46,7 +46,7 @@ text-transform: uppercase;
   line-height: 0;
 }
 
-.amenity-image {
+.section-feature-loggedin .amenity-image {
   width: 350px;
   height: 450px;
   overflow: hidden;
@@ -55,13 +55,13 @@ text-transform: uppercase;
   padding: 0;
 }
 
-.amenity-image img {
+.section-feature-loggedin .amenity-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.amenity-title {
+.section-feature-loggedin .amenity-title {
   width: 350px;
   height: 54px;
   background: linear-gradient(to right, #1d3c73, #2393aa, #3ed1b7);
@@ -75,7 +75,7 @@ text-transform: uppercase;
   font-weight: 500;
 }
 
-.amenity-title h3 {
+.section-feature-loggedin .amenity-title h3 {
   color: white;
   margin: 0;
   font-size: 16px;
@@ -85,18 +85,18 @@ text-transform: uppercase;
 }
 
 @media (max-width: 1100px) {
-  .amenities-container {
+ .section-feature-loggedin .amenities-container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
 }
 
 @media (max-width: 750px) {
-  .amenities-container {
+  .section-feature-loggedin .amenities-container {
     grid-template-columns: 1fr;
   }
 }
-.amenities-container
+.section-feature-loggedin .amenities-container
 {
     padding-bottom: 50px;
 }

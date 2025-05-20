@@ -11,7 +11,7 @@ return (
       <HeaderUserLogin />
 
 
-      <div className="hotel-container">
+      <div className="hotel-container-introduce">
       <h1 className="hotel-title">GIỚI THIỆU VỀ DEBUG HOTEL</h1>
       <div className="underline1"></div>
       <section className="section">

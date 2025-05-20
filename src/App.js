@@ -13,6 +13,11 @@ import HomeLoggedIn from './Pages/User/HomeLoggedIn';
 import IntroduceLoggedIn from './Pages/User/IntroduceLoggedIn';
 import RoomLoggedIn from './Pages/User/RoomLoggedIn';
 import FeatureLoggedIn from './Pages/User/FeatureLoggedIn';
+import DiscountLoggedIn from './Pages/User/DiscountLoggedIn';
+import Booking_Room_LoggedIn from './Pages/User/Booking_Room_LoggedIn';
+import ContactLoggedIn from './Pages/User/ContactLoggedIn';
+import EditProfile from './Pages/User/EditProfile';
+
 
 const App = () => {
   return (
@@ -31,6 +36,10 @@ const App = () => {
         <Route path="/IntroduceLoggedIn" element={<IntroduceLoggedIn />} />
         <Route path="/RoomLoggedIn" element={<RoomLoggedIn />} />
         <Route path="/FeatureLoggedIn" element={<FeatureLoggedIn />} />
+        <Route path="/DiscountLoggedIn" element={<DiscountLoggedIn />} />
+        <Route path="/Booking_Room_LoggedIn" element={<Booking_Room_LoggedIn />} />
+        <Route path="/ContactLoggedIn" element={<ContactLoggedIn />} />
+        <Route path="/EditProfile" element={<EditProfile />} />
 
       </Routes>
     </Router>

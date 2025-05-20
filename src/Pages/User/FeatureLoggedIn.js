@@ -40,6 +40,7 @@ const FeatureLoggedIn = () => {
     return (
         <>
             <HeaderUserLogin />
+            <div className="section-feature-loggedin">
             <section className="section-feature">
                 <h1 className="section-title">TIỆN ÍCH</h1>
                 <div className="underline_room"></div>
@@ -56,6 +57,7 @@ const FeatureLoggedIn = () => {
                         </div>
                     </div>
                 ))}
+            </div>
             </div>
             <FooterUser />
         </>
