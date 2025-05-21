@@ -17,7 +17,8 @@ import DiscountLoggedIn from './Pages/User/DiscountLoggedIn';
 import Booking_Room_LoggedIn from './Pages/User/Booking_Room_LoggedIn';
 import ContactLoggedIn from './Pages/User/ContactLoggedIn';
 import EditProfile from './Pages/User/EditProfile';
-
+import EditProfilePage from './Pages/User/EditProfilePage';
+import TransactionHistory from './Pages/User/TransactionHistory';
 
 const App = () => {
   return (
@@ -40,6 +41,8 @@ const App = () => {
         <Route path="/Booking_Room_LoggedIn" element={<Booking_Room_LoggedIn />} />
         <Route path="/ContactLoggedIn" element={<ContactLoggedIn />} />
         <Route path="/EditProfile" element={<EditProfile />} />
+        <Route path="/EditProfilePage" element={<EditProfilePage />} />
+        <Route path="/TransactionHistory" element={<TransactionHistory />} />
 
       </Routes>
     </Router>

@@ -54,42 +54,42 @@ function HeaderUserLogin() {
               <span className="user-text">Duy Độ</span>
 
               {isProfileOpen && (
-                <div className="profile-popup">
-                  <div className="profile-header">
-                    <span className="profile-name">Duy Độ</span>
-                    <div className="membership-status">
-                      <img src="/Img_User/CoinUser.png" alt="Gold Member" className="gold-icon" />
-                      <span>Bạn là thành viên Gold của Debug Hotel</span>
+                  <div className="profile-popup">
+                    <div className="profile-header">
+                      <span className="profile-name">Duy Độ</span>
+                      <div className="membership-status">
+                        <img src="/Img_User/CoinUser.png" alt="Gold Member" className="gold-icon" />
+                        <span>Bạn là thành viên Gold của Debug Hotel</span>
+                      </div>
+                    </div>
+                    <div className="profile-menu-items">
+                      
+                      <a href="/EditProfile"><div className="profile-menu-item">
+                        <img src="/Img_User/$.svg" alt="Points" className="menu-icon" />
+                        <span>9999 Điểm</span>
+                      </div>
+                      </a>
+
+                      <a href="EditProfilePage"><div className="profile-menu-item">
+                        <img src="/Img_User/user.svg" alt="Edit Profile" className="menu-icon" />
+                        <span>Chỉnh sửa hồ sơ</span>
+                      </div>
+                      </a>
+
+                      <a href="TransactionHistory"><div className="profile-menu-item">
+                        <img src="/Img_User/Lich.svg" alt="Transaction History" className="menu-icon" />
+                        <span>Lịch sử giao dịch</span>
+                      </div>
+                      </a>
+
+                      <a href="/"><div className="profile-menu-item">
+                        <img src="/Img_User/logout.svg" alt="Logout" className="menu-icon" />
+                        <span>Đăng xuất</span>
+                      </div>
+                      </a>
+
                     </div>
                   </div>
-                  <div className="profile-menu-items">
-                    
-                    <a href="/EditProfile"><div className="profile-menu-item">
-                      <img src="/Img_User/$.svg" alt="Points" className="menu-icon" />
-                      <span>9999 Điểm</span>
-                    </div>
-                    </a>
-
-                    <a href=""><div className="profile-menu-item">
-                      <img src="/Img_User/user.svg" alt="Edit Profile" className="menu-icon" />
-                      <span>Chỉnh sửa hồ sơ</span>
-                    </div>
-                    </a>
-
-                    <a href=""><div className="profile-menu-item">
-                      <img src="/Img_User/Lich.svg" alt="Transaction History" className="menu-icon" />
-                      <span>Lịch sử giao dịch</span>
-                    </div>
-                    </a>
-
-                    <a href="/"><div className="profile-menu-item">
-                      <img src="/Img_User/logout.svg" alt="Logout" className="menu-icon" />
-                      <span>Đăng xuất</span>
-                    </div>
-                    </a>
-
-                  </div>
-                </div>
               )}
             </div>
             <div className="user-points">

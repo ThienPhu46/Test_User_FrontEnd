@@ -245,6 +245,10 @@
   font-weight: 500;
   color: #1f2937;
 }
+.main-container-loggedin .user-points
+{
+  cursor: pointer;
+}
 
 .main-container-loggedin .user-icon,
 .main-container-loggedin .coin-icon {

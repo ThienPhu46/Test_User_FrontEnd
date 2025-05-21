@@ -1,0 +1,859 @@
+/* Main dashboard container styling */
+.dashboard-container {
+  display: flex;
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 16px;
+  box-sizing: border-box;
+
+}
+
+/* Left container styling */
+.dashboard-container .left-container {
+  width: 425px;
+}
+
+/* Profile popup container styling */
+.dashboard-container .left-container .profile-popup {
+  width: 425px;
+  height: 472px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Profile header section styling */
+.dashboard-container .left-container .profile-popup .profile-header {
+  background-color: #1976d2;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+/* Profile name styling within header */
+.dashboard-container .left-container .profile-popup .profile-header .profile-name {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Membership status styling within header */
+.dashboard-container .left-container .profile-popup .profile-header .membership-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+/* Gold icon styling within membership status */
+.dashboard-container .left-container .profile-popup .profile-header .membership-status .gold-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Profile menu items container styling */
+.dashboard-container .left-container .profile-popup .profile-menu-items {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  flex-grow: 1;
+}
+
+/* Individual menu item styling */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1976d2;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Last menu item styling to remove bottom border */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect for menu items */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item:hover {
+  background-color: #1976d2;
+}
+
+/* Menu icon styling within menu items */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item .menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(31%) sepia(94%) saturate(1352%) hue-rotate(190deg) brightness(91%) contrast(101%);
+  transition: filter 0.2s ease;
+}
+
+/* Hover effect for menu icons */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item:hover .menu-icon {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+/* Text styling within menu items */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item span {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: #2d74bb;
+}
+
+/* Hover effect for text within menu items */
+.dashboard-container .left-container .profile-popup .profile-menu-items .profile-menu-item:hover span {
+  color: white;
+}
+
+/* Link styling within menu items (if any) */
+.dashboard-container .left-container .profile-popup .profile-menu-items a {
+  text-decoration: none;
+}
+
+/* Right container styling */
+.dashboard-container .right-container {
+  width: 600px; /* Reduced width to scale down the right container */
+  margin: 0 auto; /* Center the right container */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Rewards title styling */
+.dashboard-container .right-container .rewards-title {
+  color: var(--Primary---Mu-chnh-Primary-Blue, #1D3E92);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Info cards container styling */
+.dashboard-container .right-container .info-cards {
+  display: flex;
+  gap: 16px;
+}
+
+/* Individual info card styling */
+.dashboard-container .right-container .info-cards .info-card {
+  width: 370px;
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Info card content styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #3ED1B7 0%, #2393AA 50%, #1D3C73 100%);
+  color: white;
+  border-radius: 30px;
+  justify-content: space-around;
+}
+
+/* Card title styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .card-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Points display styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .points-display {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Coin icon styling within points display */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .points-display .coin-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: #ffd700;
+  border-radius: 50%;
+}
+
+/* Coin icon text styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .points-display .coin-icon span {
+  font-size: 12px;
+}
+
+/* Points value styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .points-display .points-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Card description styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .card-description {
+  font-size: 14px;
+  margin: 0;
+  color: white;
+}
+
+/* Card button styling */
+.dashboard-container .right-container .info-cards .info-card .info-card-content .card-button {
+  color: var(--Primary---Mu-chnh-Primary-Blue, #1D3E92);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 4px 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Popup overlay styling */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content styling */
+.popup-content {
+  background-color: white;
+  border-radius: 10px;
+  width: 600px;
+  max-width: 90%;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: Inter, sans-serif;
+}
+
+/* Popup close button styling */
+.popup-close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Popup title styling */
+.popup-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1D3E92;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+/* Popup image container styling */
+.popup-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* Popup image styling */
+.popup-image img {
+  width: 180px;
+  height: auto;
+}
+
+/* Popup text styling */
+.popup-text {
+  text-align: left;
+}
+
+/* Popup subtitle styling */
+.popup-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1D3E92;
+  margin-bottom: 12px;
+}
+
+/* Popup description styling */
+.popup-description {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Popup list styling */
+.popup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Popup list item styling */
+.popup-list li {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+/* Last list item styling to remove margin */
+.popup-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* List icon styling */
+.popup-list .list-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* List item span styling */
+.popup-list li span {
+  flex: 1;
+}
+
+/* Strong text within list items styling */
+.popup-list li span strong {
+  font-weight: 700;
+  color: #1D3E92;
+}
+
+/* History section styling */
+.dashboard-container .right-container .history-section {
+  margin-top: 16px;
+  width: 100%; /* Adjusted to fit within the new right-container width */
+  max-width: 100%;
+}
+
+/* History title styling */
+.dashboard-container .right-container .history-section .history-title {
+  color: var(--Primary---Mu-chnh-Primary-Blue, #1D3E92);
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Tabs container styling */
+.dashboard-container .right-container .history-section .tabs-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs list styling */
+.dashboard-container .right-container .history-section .tabs-container .tabs-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid #2271b3;
+}
+
+/* Tab button styling */
+.dashboard-container .right-container .history-section .tabs-container .tabs-list .tab-button {
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+/* Active tab button styling */
+.dashboard-container .right-container .history-section .tabs-container .tabs-list .tab-button.active {
+  border-bottom: 2px solid #2271b3;
+  color: #2271b3;
+  font-weight: 700;
+}
+
+/* Tab button text styling */
+.dashboard-container .right-container .history-section .tabs-container .tabs-list .tab-button {
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* Tab content styling */
+.dashboard-container .right-container .history-section .tabs-container .tab-content {
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Tab panel styling */
+.dashboard-container .right-container .history-section .tabs-container .tab-content .tab-panel {
+  padding: 32px;
+}
+
+/* Empty state styling */
+.dashboard-container .right-container .history-section .tabs-container .tab-content .tab-panel .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 530px;
+}
+
+/* Illustration container styling */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .illustration-container {
+  position: relative;
+  margin-bottom: 16px;
+  height: 160px;
+  width: 160px;
+}
+
+/* Point icon styling within illustration */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .illustration-container
+  .point-icon {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Point icon text styling */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .illustration-container
+  .point-icon
+  span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Illustration styling */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .illustration-container
+  .illustration {
+  position: relative;
+}
+
+/* Sparkle effect styling within illustration */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .illustration-container
+  .illustration
+  .sparkle {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  z-index: 1;
+}
+
+/* Illustration image styling */
+.illustration-image {
+  position: relative;
+  top: -80px;
+  right: 55px;
+}
+
+/* Empty title styling */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .empty-title {
+  margin: 4px 0;
+  font-weight: 500;
+  color: #2271b3;
+  text-align: center;
+}
+
+/* Empty description styling */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .empty-description {
+  color: var(--Primary---Mu-chnh-Primary-Blue, #1D3E92);
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Learn button styling */
+.dashboard-container
+  .right-container
+  .history-section
+  .tabs-container
+  .tab-content
+  .tab-panel
+  .empty-state
+  .learn-button {
+  background: linear-gradient(180deg, #3ED1B7 0%, #2393AA 50%, #1D3C73 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Edit profile section styling */
+.dashboard-container .right-container .edit-profile-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section header styling */
+.dashboard-container .right-container .edit-profile-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Section title styling */
+.dashboard-container .right-container .edit-profile-section .section-title {
+  color: #1D3E92;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Section description styling */
+.dashboard-container .right-container .edit-profile-section .section-description {
+  color: #666;
+  font-family: Inter;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Form group styling */
+.dashboard-container .right-container .edit-profile-section .form-group {
+  margin-bottom: 20px;
+}
+
+/* Form group label styling */
+.dashboard-container .right-container .edit-profile-section .form-group label {
+  display: block;
+  color: #333;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Form input and select styling */
+.dashboard-container .right-container .edit-profile-section .form-group .form-input,
+.dashboard-container .right-container .edit-profile-section .form-group .form-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: Inter;
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Read-only input styling */
+.dashboard-container .right-container .edit-profile-section .form-group .form-input[readonly] {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* Form row styling */
+.dashboard-container .right-container .edit-profile-section .form-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Form group within form row styling */
+.dashboard-container .right-container .edit-profile-section .form-row .form-group {
+  flex: 1;
+}
+
+/* Date row styling */
+.dashboard-container .right-container .edit-profile-section .form-group .date-row {
+  display: flex;
+  gap: 8px;
+}
+
+/* Date select styling */
+.dashboard-container .right-container .edit-profile-section .form-group .date-row .date-select {
+  flex: 1;
+}
+
+/* Form actions styling */
+.dashboard-container .right-container .edit-profile-section .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* Cancel button styling */
+.dashboard-container .right-container .edit-profile-section .form-actions .cancel-button {
+  background-color: #e0f7fa;
+  color: #26c6da;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Save button styling */
+.dashboard-container .right-container .edit-profile-section .form-actions .save-button {
+  background-color: #26c6da;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Email and phone list styling */
+.dashboard-container .right-container .edit-profile-section .email-list,
+.dashboard-container .right-container .edit-profile-section .phone-list {
+  margin-bottom: 16px;
+}
+
+/* Email and phone item styling */
+.dashboard-container .right-container .edit-profile-section .email-list .email-item,
+.dashboard-container .right-container .edit-profile-section .phone-list .phone-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Last email or phone item styling */
+.dashboard-container .right-container .edit-profile-section .email-list .email-item:last-child,
+.dashboard-container .right-container .edit-profile-section .phone-list .phone-item:last-child {
+  border-bottom: none;
+}
+
+/* Email and phone item text styling */
+.dashboard-container .right-container .edit-profile-section .email-list .email-item span,
+.dashboard-container .right-container .edit-profile-section .phone-list .phone-item span {
+  font-family: Inter;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Email label styling */
+.dashboard-container .right-container .edit-profile-section .email-list .email-item .email-label {
+  background-color: #e0f7fa;
+  color: #26c6da;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Add button styling */
+.dashboard-container .right-container .edit-profile-section .add-button {
+  background-color: transparent;
+  color: #26c6da;
+  border: 1px solid #26c6da;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Linked accounts container styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Linked account item styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts .account-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Last linked account item styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts .account-item:last-child {
+  border-bottom: none;
+}
+
+/* Account info styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts .account-item .account-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Account icon styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts .account-item .account-info .account-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Account info text styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts .account-item .account-info span {
+  font-family: Inter;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Link button styling */
+.dashboard-container .right-container .edit-profile-section .linked-accounts .account-item .link-button {
+  background-color: transparent;
+  color: #26c6da;
+  border: none;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive styles for screens up to 1200px */
+@media (max-width: 1200px) {
+  .dashboard-container {
+    width: 100%;
+  }
+
+  .dashboard-container .right-container {
+    width: 500px; /* Slightly smaller for medium screens */
+  }
+
+  .dashboard-container .right-container .history-section .tabs-container .tab-content .tab-panel .empty-state {
+    width: 100%;
+  }
+}
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+    align-items: center; /* Center children when stacked */
+  }
+
+  .dashboard-container .left-container {
+    width: 100%;
+    max-width: 425px; /* Keep the left container width but center it */
+  }
+
+  .dashboard-container .left-container .profile-popup {
+    width: 100%;
+  }
+
+  .dashboard-container .right-container {
+    width: 100%;
+    max-width: 400px; /* Further reduce width for smaller screens */
+  }
+
+  .dashboard-container .right-container .info-cards {
+    flex-direction: column;
+  }
+
+  .dashboard-container .right-container .info-cards .info-card {
+    width: 100%;
+  }
+
+  .dashboard-container .right-container .edit-profile-section .form-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Active menu item styling */
+.profile-menu-item.active-menu-item {
+  background-color: #1976d2 !important;
+}
+
+/* Active menu item text styling */
+.profile-menu-item.active-menu-item span {
+  color: white !important;
+}
+
+/* Active menu item icon styling */
+.profile-menu-item.active-menu-item .menu-icon {
+  filter: brightness(0) saturate(100%) invert(100%) !important;
+}
