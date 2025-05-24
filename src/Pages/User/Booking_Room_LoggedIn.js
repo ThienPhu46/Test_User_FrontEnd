@@ -10,9 +10,9 @@ export default function Booking_Room_LoggedIn() {
   const [selectedServices, setSelectedServices] = useState([]);
   const [additionalInfo, setAdditionalInfo] = useState("");
   const [remainingChars, setRemainingChars] = useState(500);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State để hiển thị thông báo
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false); // Reintroduce state for calendar visibility
 
-  // Dữ liệu dịch vụ
   const services = [
     {
       id: "one-way",
@@ -28,7 +28,6 @@ export default function Booking_Room_LoggedIn() {
     },
   ];
 
-  // Dữ liệu phòng
   const [rooms, setRooms] = useState([
     {
       id: "single",
@@ -95,14 +94,12 @@ export default function Booking_Room_LoggedIn() {
     },
   ]);
 
-  // State cho chỉ mục ảnh hiện tại
   const [currentImageIndices, setCurrentImageIndices] = useState({
     single: 0,
     double: 0,
     deluxe: 0,
   });
 
-  // Xử lý chọn dịch vụ
   function handleServiceToggle(serviceId) {
     setSelectedServices((prev) => {
       if (prev.includes(serviceId)) {
@@ -113,7 +110,6 @@ export default function Booking_Room_LoggedIn() {
     });
   }
 
-  // Xử lý chọn phòng
   function handleRoomToggle(roomId) {
     setSelectedRooms((prev) => {
       if (prev.includes(roomId)) {
@@ -124,7 +120,6 @@ export default function Booking_Room_LoggedIn() {
     });
   }
 
-  // Tính tổng tiền
   function calculateTotal() {
     let total = 0;
     for (const roomId of selectedRooms) {
@@ -141,21 +136,18 @@ export default function Booking_Room_LoggedIn() {
     return new Intl.NumberFormat("vi-VN").format(total);
   }
 
-  // Xử lý nút tiếp theo
   function handleNextStep() {
     if (currentStep < 3) {
       setCurrentStep(currentStep + 1);
     }
   }
 
-  // Xử lý thay đổi textarea
   function handleTextAreaChange(e) {
     const text = e.target.value;
     setAdditionalInfo(text);
     setRemainingChars(500 - text.length);
   }
 
-  // Xử lý chuyển ảnh
   function handlePrevImage(roomId) {
     setCurrentImageIndices((prev) => {
       const room = rooms.find((r) => r.id === roomId);
@@ -183,7 +175,6 @@ export default function Booking_Room_LoggedIn() {
     }));
   }
 
-  // Render bước 1
   function renderStep1() {
     return (
       <div className="step-container">
@@ -274,7 +265,6 @@ export default function Booking_Room_LoggedIn() {
     );
   }
 
-  // Render bước 2
   function renderStep2() {
     return (
       <div className="step-container">
@@ -355,14 +345,13 @@ export default function Booking_Room_LoggedIn() {
     );
   }
 
-  // Render bước 3
   function renderStep3() {
     const formatPrice = (price) => {
       return new Intl.NumberFormat("vi-VN").format(price);
     };
 
     const handleBookNow = () => {
-      setIsModalOpen(true); // Mở modal khi nhấn nút
+      setIsModalOpen(true);
     };
 
     return (
@@ -558,7 +547,6 @@ export default function Booking_Room_LoggedIn() {
     );
   }
 
-  // Render sidebar
   function renderSidebar() {
     return (
       <div className="sidebar-card">
@@ -594,11 +582,15 @@ export default function Booking_Room_LoggedIn() {
     );
   }
 
-  // Render chính
   return (
     <>
       <div className="booking-container">
-        <HeaderBookingRoom currentStep={currentStep} onStepChange={setCurrentStep} />
+        <HeaderBookingRoom 
+          currentStep={currentStep} 
+          onStepChange={setCurrentStep} 
+          isCalendarOpen={isCalendarOpen} 
+          setIsCalendarOpen={setIsCalendarOpen} 
+        />
 
         <div className="booking-content">
           <div className="booking-main">

@@ -198,7 +198,7 @@ function TransactionHistoryPage() {
                   <div className="empty-state empty-state-custom">
                     <div className="illustration-container">
                       <img
-                        src="/Img_User/transaction-illustration.png"
+                        src="/Img_User/Coin_EditProfile.png"
                         alt="Transaction Illustration"
                         className="illustration-image illustration-image-custom"
                       />

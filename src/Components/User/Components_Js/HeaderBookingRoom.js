@@ -1,135 +1,111 @@
-import { useState } from "react"
+import { useState } from "react";
 import "../Components_Css/HeaderBookingRoom.css";
 
 export default function HeaderBookingRoom({ currentStep, onStepChange }) {
-  const [dateRange, setDateRange] = useState("11 Tháng Bảy - 12 Tháng Bảy")
-  const [guests, setGuests] = useState("1 phòng, 1 người lớn")
-  const [promoCode, setPromoCode] = useState("")
-  const [showCalendar, setShowCalendar] = useState(false)
-  const [showGuestSelector, setShowGuestSelector] = useState(false)
-  const [selectedDates, setSelectedDates] = useState({ start: null, end: null })
-  const [currentMonth, setCurrentMonth] = useState(7)
-  const [currentYear] = useState(2025)
-  const [selectionStep, setSelectionStep] = useState(0)
-  const [adults, setAdults] = useState(1)
-  const [children, setChildren] = useState(0)
-  const [rooms, setRooms] = useState(1)
+  const [dateRange, setDateRange] = useState("11 Tháng Bảy - 12 Tháng Bảy");
+  const [guests, setGuests] = useState("1 phòng, 1 người lớn");
+  const [promoCode, setPromoCode] = useState("");
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [showGuestSelector, setShowGuestSelector] = useState(false);
+  const [selectedDates, setSelectedDates] = useState({ start: null, end: null });
+  const [currentMonth, setCurrentMonth] = useState(7);
+  const [currentYear] = useState(2025);
+  const [selectionStep, setSelectionStep] = useState(0);
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [rooms, setRooms] = useState(1);
 
   const handleDateClick = () => {
-    setShowCalendar(true)
-    setShowGuestSelector(false)
-  }
+    setShowCalendar(true);
+    setShowGuestSelector(false);
+  };
 
   const handleGuestClick = () => {
-    setShowGuestSelector(true)
-    setShowCalendar(false)
-  }
+    setShowGuestSelector(true);
+    setShowCalendar(false);
+  };
 
   const handleDateSelection = (date) => {
     if (selectionStep === 0 || selectionStep === 2) {
-      // Start new selection
-      setSelectedDates({ start: date, end: null })
-      setSelectionStep(1)
+      setSelectedDates({ start: date, end: null });
+      setSelectionStep(1);
     } else if (selectionStep === 1) {
-      // Complete selection
       if (date < selectedDates.start) {
-        // If end date is before start date, swap them
-        setSelectedDates({ start: date, end: selectedDates.start })
+        setSelectedDates({ start: date, end: selectedDates.start });
       } else {
-        setSelectedDates({ ...selectedDates, end: date })
+        setSelectedDates({ ...selectedDates, end: date });
       }
-      setSelectionStep(2)
+      setSelectionStep(2);
 
-      // Format the date range for display
-      const startDate = `${selectedDates.start} Tháng ${currentMonth}`
-      const endDate = date < selectedDates.start 
-        ? `${selectedDates.start} Tháng ${currentMonth}` 
-        : `${date} Tháng ${currentMonth}`
-      setDateRange(`${startDate} - ${endDate}`)
+      const startDate = `${selectedDates.start} Tháng ${currentMonth}`;
+      const endDate = date < selectedDates.start ? `${selectedDates.start} Tháng ${currentMonth}` : `${date} Tháng ${currentMonth}`;
+      setDateRange(`${startDate} - ${endDate}`);
     }
-  }
+  };
 
   const handleGuestSelection = () => {
-    setGuests(`${rooms} phòng, ${adults} người lớn${children > 0 ? `, ${children} trẻ em` : ""}`)
-    setShowGuestSelector(false)
-  }
+    setGuests(`${rooms} phòng, ${adults} người lớn${children > 0 ? `, ${children} trẻ em` : ""}`);
+    setShowGuestSelector(false);
+  };
 
   const handleCancel = () => {
-    setShowCalendar(false)
-    setShowGuestSelector(false)
-  }
+    setShowCalendar(false);
+    setShowGuestSelector(false);
+  };
 
   const handlePrevMonth = () => {
     if (currentMonth > 1) {
-      setCurrentMonth(currentMonth - 1)
+      setCurrentMonth(currentMonth - 1);
     } else {
-      setCurrentMonth(12)
+      setCurrentMonth(12);
     }
-    // Reset selection when changing month
-    setSelectedDates({ start: null, end: null })
-    setSelectionStep(0)
-  }
+    setSelectedDates({ start: null, end: null });
+    setSelectionStep(0);
+  };
 
   const handleNextMonth = () => {
     if (currentMonth < 12) {
-      setCurrentMonth(currentMonth + 1)
+      setCurrentMonth(currentMonth + 1);
     } else {
-      setCurrentMonth(1)
+      setCurrentMonth(1);
     }
-    // Reset selection when changing month
-    setSelectedDates({ start: null, end: null })
-    setSelectionStep(0)
-  }
+    setSelectedDates({ start: null, end: null });
+    setSelectionStep(0);
+  };
 
   const getDaysInMonth = (year, month) => {
-    return new Date(year, month, 0).getDate()
-  }
+    return new Date(year, month, 0).getDate();
+  };
 
   const getFirstDayOfMonth = (year, month) => {
-    return new Date(year, month - 1, 1).getDay()
-  }
+    return new Date(year, month - 1, 1).getDay();
+  };
 
   const renderCalendar = () => {
-    const daysInMonth = getDaysInMonth(currentYear, currentMonth)
-    const firstDay = getFirstDayOfMonth(currentYear, currentMonth)
+    const daysInMonth = getDaysInMonth(currentYear, currentMonth);
+    const firstDay = getFirstDayOfMonth(currentYear, currentMonth);
 
-    // Get days from(previous month to fill the first week
-    const daysFromPrevMonth = firstDay === 0 ? 6 : firstDay - 1
+    const daysFromPrevMonth = firstDay === 0 ? 6 : firstDay - 1;
+    const prevMonth = currentMonth === 1 ? 12 : currentMonth - 1;
+    const daysInPrevMonth = getDaysInMonth(currentYear, prevMonth);
+    const nextMonth = currentMonth === 12 ? 1 : currentMonth + 1;
 
-    // Create array of day names
-    const dayNames = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]
-
-    // Create array of dates
-    const dates = []
-
-    // Add days from previous month
-    const prevMonth = currentMonth === 1 ? 12 : currentMonth - 1
-    const daysInPrevMonth = getDaysInMonth(currentYear, prevMonth)
-
+    const dates = [];
     for (let i = daysInPrevMonth - daysFromPrevMonth + 1; i <= daysInPrevMonth; i++) {
-      dates.push({ day: i, month: prevMonth, isCurrentMonth: false })
+      dates.push({ day: i, month: prevMonth, isCurrentMonth: false });
     }
-
-    // Add days from current month
     for (let i = 1; i <= daysInMonth; i++) {
-      dates.push({ day: i, month: currentMonth, isCurrentMonth: true })
+      dates.push({ day: i, month: currentMonth, isCurrentMonth: true });
+    }
+    for (let i = 1; i <= 42 - dates.length; i++) {
+      dates.push({ day: i, month: nextMonth, isCurrentMonth: false });
     }
 
-    // Add days from next month to complete the grid (6 rows x 7 columns = 42 cells)
-    const remainingDays = 42 - dates.length
-    const nextMonth = currentMonth === 12 ? 1 : currentMonth + 1
-
-    for (let i = 1; i <= remainingDays; i++) {
-      dates.push({ day: i, month: nextMonth, isCurrentMonth: false })
-    }
-
-    // Split dates into weeks
-    const weeks = []
+    const weeks = [];
     for (let i = 0; i < dates.length; i += 7) {
-      weeks.push(dates.slice(i, i + 7))
+      weeks.push(dates.slice(i, i + 7));
     }
 
-    // Get month name
     const monthNames = [
       "Tháng 1",
       "Tháng 2",
@@ -143,10 +119,10 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
       "Tháng 10",
       "Tháng 11",
       "Tháng 12",
-    ]
+    ];
 
     return (
-      <div className="calendar-popup">
+      <div className="calendar-popup" style={{ width: "400px", padding: "10px" }}>
         <div className="calendar-header">
           <button className="calendar-nav-btn" onClick={handlePrevMonth}>
             <svg
@@ -163,7 +139,7 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
-          <h3>
+          <h3 style={{ fontSize: "14px" }}>
             {monthNames[currentMonth - 1]} {currentYear}
           </h3>
           <button className="calendar-nav-btn" onClick={handleNextMonth}>
@@ -185,8 +161,8 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
 
         <div className="calendar-table">
           <div className="calendar-header">
-            {dayNames.map((day, index) => (
-              <div key={index} className="calendar-day-header">
+            {["CN", "T2", "T3", "T4", "T5", "T6", "T7"].map((day, index) => (
+              <div key={index} className="calendar-day-header" style={{ fontSize: "11px" }}>
                 {day}
               </div>
             ))}
@@ -204,24 +180,24 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
                       (selectedDates.start !== null &&
                         selectedDates.end !== null &&
                         date.day > selectedDates.start &&
-                        date.day < selectedDates.end))
-
+                        date.day < selectedDates.end));
                   const isInRange =
                     date.isCurrentMonth &&
                     selectedDates.start !== null &&
                     selectedDates.end !== null &&
                     date.day > selectedDates.start &&
-                    date.day < selectedDates.end
+                    date.day < selectedDates.end;
 
                   return (
                     <div
                       key={dateIndex}
                       className={`calendar-date ${!date.isCurrentMonth ? "other-month" : ""} ${isSelected ? "selected" : ""} ${isInRange ? "in-range" : ""}`}
+                      style={{ padding: "5px", fontSize: "12px" }}
                       onClick={() => date.isCurrentMonth && handleDateSelection(date.day)}
                     >
                       {date.day}
                     </div>
-                  )
+                  );
                 })}
               </div>
             ))}
@@ -236,14 +212,13 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
             className="calendar-done-btn"
             onClick={() => {
               if (selectedDates.start && selectedDates.end) {
-                setShowCalendar(false)
+                setShowCalendar(false);
               } else if (selectedDates.start) {
-                // If only start date is selected, use it as both start and end
-                setSelectedDates({ start: selectedDates.start, end: selectedDates.start })
+                setSelectedDates({ start: selectedDates.start, end: selectedDates.start });
                 setDateRange(
                   `${selectedDates.start} Tháng ${currentMonth} - ${selectedDates.start} Tháng ${currentMonth}`
-                )
-                setShowCalendar(false)
+                );
+                setShowCalendar(false);
               }
             }}
           >
@@ -251,8 +226,8 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
           </button>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   const renderGuestSelector = () => {
     return (
@@ -318,8 +293,8 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
           </button>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   return (
     <div className="app">
@@ -414,5 +389,5 @@ export default function HeaderBookingRoom({ currentStep, onStepChange }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
