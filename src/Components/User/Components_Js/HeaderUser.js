@@ -23,17 +23,9 @@ function HomePage() {
             <NavLink to="/Room" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Phòng</NavLink>
             <NavLink to="/Feature" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Tiện ích</NavLink>
             <NavLink to="/Discount" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Khuyến mãi</NavLink>
-            <NavLink to="/Booking_Room" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Đặt phòng</NavLink>
             <NavLink to="/Contact" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Liên hệ</NavLink>
           </div>
-            <div className="auth-buttons">
-              <a href="/LoginUser" className="login-button">
-                ĐĂNG NHẬP
-              </a>
-              <a href="/RegisterUser" className="register-button">
-                ĐĂNG KÝ
-              </a>
-            </div>
+
           </div>
 
           <button className="mobile-menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -63,20 +55,9 @@ function HomePage() {
               <a href="/Discount" className="mobile-nav-link">
                 Khuyến mãi
               </a>
-              <a href="/Booking_Room" className="mobile-nav-link">
-                Đặt phòng
-              </a>
               <a href="Contact" className="mobile-nav-link">
                 Liên hệ
               </a>
-              <div className="mobile-auth-buttons">
-                <a href="/LoginUser" className="mobile-login-button">
-                  ĐĂNG NHẬP
-                </a>
-                <a href="/register" className="mobile-register-button">
-                  ĐĂNG KÝ
-                </a>
-              </div>
             </div>
           </div>
         )}
@@ -85,11 +66,6 @@ function HomePage() {
       <div className="hero-container">
         <div className="hero-image-container">
           <img src="/Img_User/Img_Page.png" alt="Luxury Hotel" className="hero-image" />
-        </div>
-        <div className="hero-cta">
-          <a href="/RegisterUser" className="register-now-button">
-            ĐĂNG KÝ NGAY
-          </a>
         </div>
       </div>
     </main>
