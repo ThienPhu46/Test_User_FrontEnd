@@ -1,25 +1,75 @@
 import { useState } from "react"
 import "../Components_Css/LoginUser.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function LoginUser() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
+  const [error, setError] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log("Login attempt with:", username, password)
+    setError("")
+    
+    // Basic validation
+    if (!username || !password) {
+      setError("Vui lòng nhập tên tài khoản và mật khẩu")
+      return
+    }
+
+    setIsLoading(true)
+    
+    try {
+      const response = await axios.post("http://localhost:5282/api/auth/login", {
+        TenTaiKhoan: username,
+        MatKhau: password
+      }, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.data && response.data.success) {
+        // Save tokens to localStorage or context
+        localStorage.setItem("accessToken", response.data.data.AccessToken)
+        localStorage.setItem("refreshToken", response.data.data.RefreshToken)
+        localStorage.setItem("user", JSON.stringify(response.data.data))
+        
+        // Redirect to home page
+        navigate("/HomeLoggedIn");
+      } else {
+        setError(response.data.message || "Đăng nhập thất bại")
+      }
+    } catch (err) {
+      // Handle different error cases
+      if (err.response) {
+        // The request was made and the server responded with a status code
+        if (err.response.status === 401) {
+          setError("Tên đăng nhập hoặc mật khẩu không đúng")
+        } else if (err.response.status === 403) {
+          setError("Tài khoản chưa được kích hoạt. Vui lòng xác minh OTP.")
+        } else {
+          setError(err.response.data?.message || "Đã xảy ra lỗi khi đăng nhập")
+        }
+      } else if (err.request) {
+        // The request was made but no response was received
+        setError("Không thể kết nối đến máy chủ")
+      } else {
+        // Something happened in setting up the request
+        setError("Đã xảy ra lỗi khi thiết lập yêu cầu")
+      }
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
   }
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate("/HomeLoggedIn");
-  };
 
   return (
     <div className="login-wrapper">
@@ -95,9 +145,25 @@ function LoginUser() {
             </div>
           </div>
 
-          <button type="button" className="login-button" onClick={handleClick}>
-            Đăng nhập
+          <button 
+            type="submit" 
+            className="login-button" 
+            disabled={isLoading}
+          >
+            {isLoading ? "Đang đăng nhập..." : "Đăng nhập"}
           </button>
+
+          {/* Hiển thị thông báo lỗi dưới button đăng nhập */}
+          {error && (
+            <div className="error-message" style={{
+              color: 'red',
+              textAlign: 'center',
+              marginTop: '10px',
+              fontSize: '14px'
+            }}>
+              {error}
+            </div>
+          )}
         </form>
 
         <div className="register-text">
